@@ -1,4 +1,4 @@
-# Multi-Cloud Data Platform — DataOps with Observability & CI/CD
+## Multi-Cloud Data Platform — DataOps with Observability & CI/CD
 
 Production-grade data platform spanning **AWS, Azure, and OCI** with data
 quality gates, lineage tracking, CI/CD automation, and cost governance —
