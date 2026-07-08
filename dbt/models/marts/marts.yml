@@ -1,0 +1,16 @@
+version: 2
+models:
+  - name: fct_daily_revenue
+    description: Daily revenue by category from completed orders only (grain = day x category).
+    columns:
+      - name: order_date
+        tests: [not_null]
+      - name: revenue
+        tests: [not_null]
+  - name: dim_customers
+    description: One row per customer with lifetime completed spend.
+    columns:
+      - name: customer_id
+        tests: [unique, not_null]
+      - name: lifetime_spend
+        tests: [not_null]

@@ -1,0 +1,35 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  data-quality-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.11"}
+      - name: Install deps
+        run: pip install -r requirements.txt
+      - name: Lint python
+        run: ruff check quality scripts
+      - name: dbt build (seed + models + dbt tests) on DuckDB
+        run: cd dbt && dbt seed --profiles-dir . && dbt build --profiles-dir .
+      - name: Great Expectations quality gate
+        run: python quality/run_quality_gate.py
+      - name: Cost report smoke test
+        run: python scripts/cost_report.py data/billing_samples
+
+  terraform-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/setup-terraform@v3
+      - name: fmt
+        run: terraform -chdir=terraform fmt -check -recursive
+      - name: validate
+        run: |
+          terraform -chdir=terraform init -backend=false
+          terraform -chdir=terraform validate

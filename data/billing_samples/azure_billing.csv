@@ -1,0 +1,5 @@
+UsageDateTime,MeterCategory,Tags_project,PreTaxCost
+2026-06-01,Storage,multicloud-platform,9.75
+2026-06-01,Azure Databricks,multicloud-platform,104.50
+2026-06-02,Storage,multicloud-platform,9.90
+2026-06-02,Azure Databricks,multicloud-platform,97.30

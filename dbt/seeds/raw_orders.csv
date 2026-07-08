@@ -1,0 +1,11 @@
+order_id,customer_id,order_date,category,amount,status
+1001,C001,2026-06-01,electronics,299.99,completed
+1002,C002,2026-06-01,apparel,59.50,completed
+1003,C001,2026-06-02,home,120.00,completed
+1004,C003,2026-06-02,electronics,899.00,returned
+1005,C002,2026-06-03,toys,35.25,completed
+1006,C004,2026-06-03,apparel,75.00,completed
+1007,C001,2026-06-03,electronics,45.99,cancelled
+1008,C005,2026-06-04,home,210.10,completed
+1009,C003,2026-06-04,toys,15.00,completed
+1010,C004,2026-06-05,electronics,499.99,completed

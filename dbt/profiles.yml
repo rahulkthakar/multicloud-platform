@@ -1,0 +1,18 @@
+# dev = local DuckDB so anyone can run the full project with zero cloud cost.
+# prod targets (Redshift / Databricks) are config-only swaps — same models.
+multicloud_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: local.duckdb
+      threads: 4
+    # prod_redshift:
+    #   type: redshift
+    #   host: "{{ env_var('REDSHIFT_HOST') }}"
+    #   ...
+    # prod_databricks:
+    #   type: databricks
+    #   host: "{{ env_var('DBX_HOST') }}"
+    #   http_path: "{{ env_var('DBX_HTTP_PATH') }}"
+    #   ...

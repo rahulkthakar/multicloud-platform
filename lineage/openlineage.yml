@@ -1,0 +1,7 @@
+# OpenLineage config: dbt runs through the `dbt-ol` wrapper emit lineage
+# events (job + dataset level) to the configured backend, e.g. Marquez:
+#   docker run -p 5000:5000 marquezproject/marquez
+transport:
+  type: http
+  url: http://localhost:5000
+  endpoint: api/v1/lineage

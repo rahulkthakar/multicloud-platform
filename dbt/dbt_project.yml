@@ -1,0 +1,13 @@
+name: multicloud_analytics
+version: "1.0.0"
+profile: multicloud_analytics
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+models:
+  multicloud_analytics:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+*.duckdb
+.terraform/
+*.tfstate*
+.terraform.lock.hcl
+.DS_Store
+.env

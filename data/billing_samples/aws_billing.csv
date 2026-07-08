@@ -1,0 +1,5 @@
+lineItem/UsageStartDate,product/ProductName,resourceTags/user:project,lineItem/UnblendedCost
+2026-06-01,Amazon S3,multicloud-platform,12.40
+2026-06-01,Amazon Redshift,multicloud-platform,88.20
+2026-06-02,Amazon S3,multicloud-platform,12.85
+2026-06-02,Amazon Redshift,multicloud-platform,91.10
